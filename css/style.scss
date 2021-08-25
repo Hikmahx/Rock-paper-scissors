@@ -1,0 +1,29 @@
+/* MOBILE FIRST */ 
+
+// variables
+$dark-text: rgb(59, 67, 99);
+$score-text: rgb(42, 70, 192);
+$header-outline: rgb(96, 110, 133);
+$rg-background1: rgb(31, 55, 86);
+$rg-background2: rgb(20, 21, 57);
+$scissor-gradient-1:rgb(236, 158, 14);
+$scissor-gradient-2:rgb(236, 169, 34);
+$rock-gradient-1:rgb(220, 46, 78);
+$rock-gradient-2:rgb(221, 64, 93);
+$paper-gradient-1:rgb(72, 101, 244);
+$paper-gradient-2:rgb(86, 113, 245);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+  
