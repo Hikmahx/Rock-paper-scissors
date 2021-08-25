@@ -13,4 +13,10 @@ html {
   font-size: 62.5%;
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
 /*# sourceMappingURL=style.css.map */
