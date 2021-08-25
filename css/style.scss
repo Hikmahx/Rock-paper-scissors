@@ -27,6 +27,12 @@ html{
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+body{
+  position: relative;
+  width: 100%;
+  height: 75rem;
+}
+
 @import './modal';
 @import './main';
 @import './footer';  
