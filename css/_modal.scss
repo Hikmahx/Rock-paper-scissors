@@ -4,10 +4,15 @@
   height: 75rem;
   z-index: 1;
   background: #fff;
-  display: flex;
-  flex-direction: column;
   padding: 0 2rem;
   top: 0;
+  display: none;
+  
+  &.active{
+    display: flex;
+    flex-direction: column;
+
+  }
 
   
   h1{
