@@ -1,5 +1,8 @@
-.scoreboard-container{
+main{
   padding: 3rem 3.1rem;
+}
+
+.scoreboard-container{
   width: 100%;
   height: 9.9rem;
   margin-bottom: 10rem;
@@ -11,9 +14,13 @@
   border-radius: 0.6rem;
 
   img{
+    // width: 10rem;
+    // transform: scale(0.7);
     margin: 0.4rem 0 0 1rem;
     width: 8.6rem;
     height: 5rem;
+    // width:8.4rem;
+    // height: 5.1rem;
   }
 
   .scoreboard{

@@ -61,8 +61,11 @@ body {
   margin: 13.5rem auto auto;
 }
 
-.scoreboard-container {
+main {
   padding: 3rem 3.1rem;
+}
+
+.scoreboard-container {
   width: 100%;
   height: 9.9rem;
   margin-bottom: 10rem;
