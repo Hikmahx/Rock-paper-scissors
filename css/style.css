@@ -60,4 +60,53 @@ body {
   height: 2rem;
   margin: 13.5rem auto auto;
 }
+
+.scoreboard-container {
+  padding: 3rem 3.1rem;
+  width: 100%;
+  height: 9.9rem;
+  margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border: 0.3rem #606e85 solid;
+  border-radius: 0.6rem;
+}
+
+.scoreboard-container img {
+  margin: 0.4rem 0 0 1rem;
+  width: 8.6rem;
+  height: 5rem;
+}
+
+.scoreboard-container .scoreboard {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 8rem;
+  height: 7.2rem;
+  text-align: center;
+}
+
+.scoreboard-container .scoreboard h2 {
+  color: #2a46c0;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+}
+
+.scoreboard-container .scoreboard .score {
+  color: #3b4363;
+  font-size: 4rem;
+  font-weight: 700;
+  position: relative;
+  bottom: 0.4rem;
+  letter-spacing: -0.5px;
+}
 /*# sourceMappingURL=style.css.map */
