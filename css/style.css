@@ -112,4 +112,129 @@ main {
   bottom: 0.4rem;
   letter-spacing: -0.5px;
 }
+
+.choices {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.choices .triangle {
+  margin: 6rem 0 0 0.63rem;
+  width: 25rem;
+  height: 21rem;
+  position: relative;
+}
+
+.picks {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (11.1%)[9];
+      grid-template-columns: repeat(9, 11.1%);
+  -ms-grid-rows: (4%)[25];
+      grid-template-rows: repeat(25, 4%);
+}
+
+.picks .pick-container {
+  width: 12.7rem;
+  height: 12.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #e6e6e6;
+  border-radius: 50%;
+}
+
+.picks .pick-container .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 2rem 1rem;
+  width: 9.8rem;
+  height: 9.8rem;
+  background: #ececeb;
+  -webkit-box-shadow: inset 0 5px #bec0d5;
+          box-shadow: inset 0 5px #bec0d5;
+  border-radius: 69%;
+  border: none;
+}
+
+.picks .pick-container .image img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.picks .pick-container:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(#dc2e4e, #dd405d);
+  -webkit-box-shadow: 0 7px 0 -1.5px #ae1b37;
+          box-shadow: 0 7px 0 -1.5px #ae1b37;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 10;
+  -ms-grid-row: 20;
+      grid-row-start: 20;
+  grid-row-end: 22;
+}
+
+.picks .pick-container:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(#4865f4, #5671f5);
+  -webkit-box-shadow: 0 7px 0 -1.5px #2d1bd2f2;
+          box-shadow: 0 7px 0 -1.5px #2d1bd2f2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 5;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  grid-row-end: 13;
+}
+
+.picks .pick-container:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(#ec9e0e, #eca922);
+  -webkit-box-shadow: 0 7px 0 -1.5px #d27d1bf2;
+          box-shadow: 0 7px 0 -1.5px #d27d1bf2;
+  -ms-grid-column: 6;
+      grid-column-start: 6;
+  grid-column-end: 10;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  grid-row-end: 13;
+}
 /*# sourceMappingURL=style.css.map */
