@@ -84,6 +84,7 @@ main{
     justify-content: center;
     background: #e6e6e6;
     border-radius: 50%;
+    z-index: 1;
 
     .image{
       display: flex;
@@ -147,5 +148,50 @@ main{
       margin-left: 0.8rem;
     }
 
+  }
+}
+
+.choice{
+  position: absolute;
+  width: 14rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  grid-row: 2;
+  visibility: hidden;
+
+  &.my-choice{
+    grid-column: 1;
+    grid-column-end: 5;
+    justify-self: center;
+    margin-right: 1rem;
+  }
+
+  &.computer-choice{
+    grid-column-start: 6;
+    justify-self: center;
+    // align-self: center;
+    // grid-row-end: 16;
+    margin-left: 1rem;
+  }
+
+  .circle-container{
+    margin: 0 auto;
+    width: 10.9rem;
+    height: 10.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #192845;
+    border-radius: 50%;
+  }
+
+  h3{
+    white-space: nowrap;
+    font-size: 1.45rem;
+    letter-spacing: 2px;
+    margin: auto;
+    margin-top: 3.5rem;
   }
 }
