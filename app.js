@@ -23,6 +23,7 @@ pickContainer.forEach(pick=>{
     let pickType = pick.lastElementChild.lastElementChild.className;
         e.target= pick;
     removeOtherPicks(pickType);
+    shiftPick(pick);
   })
 })
 
@@ -37,3 +38,19 @@ function removeOtherPicks(myPick) {
   })
 }
 
+
+function shiftPick(pick) {
+  pick.classList.add('shift');
+  let circleContainer = document.querySelector('.my-choice > .circle-container');
+  let choiceTop = circleContainer.getBoundingClientRect().top;
+  let choiceLeft = circleContainer.getBoundingClientRect().left;
+  let pickTop = pick.getBoundingClientRect().top;
+  let pickLeft = pick.getBoundingClientRect().left;
+  
+  console.log(`circle Left: ${choiceLeft}`)
+  console.log(`circle Top: ${choiceTop}`)
+  console.log(`pick top: ${pickTop}`)
+  console.log(`pick left: ${pickLeft}`)
+  pick.style.transform = `translate(${choiceLeft-pickLeft}px, ${choiceTop-pickTop}px)`
+  pick.style.transition = '1s ease';
+}
