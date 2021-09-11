@@ -24,6 +24,8 @@ pickContainer.forEach(pick=>{
         e.target= pick;
     removeOtherPicks(pickType);
     shiftPick(pick);
+    displayMyChoice();
+    displayComputerChoice();
   })
 })
 
@@ -53,4 +55,16 @@ function shiftPick(pick) {
   console.log(`pick left: ${pickLeft}`)
   pick.style.transform = `translate(${choiceLeft-pickLeft}px, ${choiceTop-pickTop}px)`
   pick.style.transition = '1s ease';
+}
+
+function displayMyChoice(){
+  let myChoice = document.querySelector('.choice.my-choice');
+  myChoice.style.visibility = 'visible';
+  myChoice.style.transition = '1s ease-in-out 1s';
+}
+
+function displayComputerChoice(){
+    let computerChoice = document.querySelector('.choice.computer-choice');
+  computerChoice.style.visibility = 'visible';
+  computerChoice.style.transition = '1s ease-in-out 2.4s';
 }
