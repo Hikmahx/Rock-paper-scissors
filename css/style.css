@@ -207,7 +207,7 @@ main {
           transform: scale(0.9);
 }
 
-.picks .pick-container:nth-child(1) {
+.picks .pick-container.rock {
   background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
   background: linear-gradient(#dc2e4e, #dd405d);
   -webkit-box-shadow: 0 7px 0 -1.5px #ae1b37;
@@ -225,7 +225,7 @@ main {
   grid-row-end: 22;
 }
 
-.picks .pick-container:nth-child(2) {
+.picks .pick-container.paper {
   background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
   background: linear-gradient(#4865f4, #5671f5);
   -webkit-box-shadow: 0 7px 0 -1.5px #2d1bd2f2;
@@ -243,7 +243,7 @@ main {
   margin-right: 0.8rem;
 }
 
-.picks .pick-container:nth-child(3) {
+.picks .pick-container.scissors {
   background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
   background: linear-gradient(#ec9e0e, #eca922);
   -webkit-box-shadow: 0 7px 0 -1.5px #d27d1bf2;
