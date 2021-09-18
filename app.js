@@ -68,3 +68,19 @@ function displayComputerChoice(){
   computerChoice.style.visibility = 'visible';
   computerChoice.style.transition = '1s ease-in-out 2.4s';
 }
+
+computerRandomChoice();
+
+function computerRandomChoice() {
+  let computerChoice = document.querySelector('.choice.computer-choice');
+  let pickArray = [];
+  pickContainer.forEach(pick=>{
+    let pickType = pick;
+    pickArray.push(pick)
+  }) 
+  let pickIndex = Math.floor(Math.random() * 3);
+  let randomChoice = pickArray[pickIndex];
+  let computerPick = randomChoice.cloneNode(true);
+  computerChoice.appendChild(computerPick);
+}
+
