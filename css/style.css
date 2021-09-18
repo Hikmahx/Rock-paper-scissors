@@ -109,7 +109,7 @@ main {
   height: 5rem;
 }
 
-.scoreboard-container .scoreboard {
+.scoreboard, .choices .win-lose-tie button {
   background: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -118,13 +118,13 @@ main {
   text-align: center;
 }
 
-.scoreboard-container .scoreboard h2 {
+.scoreboard h2, .choices .win-lose-tie button h2 {
   color: #2a46c0;
   font-size: 0.95rem;
   letter-spacing: 2px;
 }
 
-.scoreboard-container .scoreboard .score {
+.scoreboard .score, .choices .win-lose-tie button .score {
   color: #3b4363;
   font-size: 4rem;
   font-weight: 700;
@@ -151,6 +151,41 @@ main {
   position: relative;
 }
 
+.choices .win-lose-tie {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -10.3rem;
+}
+
+.choices .win-lose-tie strong {
+  font-size: 5.4rem;
+  color: white;
+  padding-bottom: 1.7rem;
+  letter-spacing: 0.15rem;
+}
+
+.choices .win-lose-tie button {
+  border: none;
+  border-radius: 0.8rem;
+  white-space: nowrap;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+  width: 22rem;
+  margin: auto;
+  height: 4.8rem;
+  color: #3b4363;
+}
+
 .picks {
   position: absolute;
   top: 0;
@@ -163,6 +198,7 @@ main {
       grid-template-columns: repeat(9, 11.1%);
   -ms-grid-rows: (4%)[25];
       grid-template-rows: repeat(25, 4%);
+  display: none;
 }
 
 .picks .pick-container {
