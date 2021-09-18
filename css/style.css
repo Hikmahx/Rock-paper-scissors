@@ -290,9 +290,16 @@ main {
 .choice.computer-choice {
   -ms-grid-column: 6;
       grid-column-start: 6;
+  grid-column-end: 10;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-left: 1rem;
+  position: relative;
+}
+
+.choice.computer-choice .pick-container {
+  position: absolute;
+  left: 18%;
 }
 
 .choice .circle-container {

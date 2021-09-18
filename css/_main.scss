@@ -170,10 +170,16 @@ main{
 
   &.computer-choice{
     grid-column-start: 6;
+    grid-column-end: 10;
     justify-self: center;
-    // align-self: center;
-    // grid-row-end: 16;
+  // grid-row-end: 16;
     margin-left: 1rem;
+    position: relative;
+
+    .pick-container{
+      position: absolute;
+      left: 18%;
+    }
   }
 
   .circle-container{
