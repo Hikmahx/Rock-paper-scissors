@@ -164,6 +164,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   bottom: -10.3rem;
+  opacity: 0;
 }
 
 .choices .win-lose-tie strong {
@@ -198,7 +199,6 @@ main {
       grid-template-columns: repeat(9, 11.1%);
   -ms-grid-rows: (4%)[25];
       grid-template-rows: repeat(25, 4%);
-  display: none;
 }
 
 .picks .pick-container {

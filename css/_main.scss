@@ -66,6 +66,7 @@ main{
     flex-direction: column;
     align-items: center;
     bottom: -10.3rem;
+    opacity: 0;
 
     strong{
       font-size: 5.4rem;
@@ -178,7 +179,6 @@ main{
     }
 
   }
-  display:none;
 }
 
 .choice{
