@@ -26,6 +26,10 @@ pickContainer.forEach(pick=>{
     shiftPick(pick);
     displayMyChoice();
     displayComputerChoice();
+    setTimeout(()=>{
+      document.querySelector('.computer-choice >.pick-container').style.visibility = 'visible';
+      document.querySelector('.computer-choice >.pick-container').style.opacity= '1';
+    }, 3000)
   })
 })
 
