@@ -299,7 +299,8 @@ main {
 
 .choice.computer-choice .pick-container {
   position: absolute;
-  left: 18%;
+  left: 0%;
+  right: 0%;
 }
 
 .choice .circle-container {
