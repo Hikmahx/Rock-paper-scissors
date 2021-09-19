@@ -31,6 +31,7 @@ pickContainer.forEach(pick=>{
       document.querySelector('.computer-choice >.pick-container').style.opacity= '1';
     }, 3000)
     setTimeout(() => comparePicks(), 3600);
+    setTimeout(() => updateScore(), 3700);
   })
 })
 
@@ -141,7 +142,25 @@ function comparePicks(){
 function restartGame() {
   let restartBtn = document.querySelector('.win-lose-tie button');
   restartBtn.addEventListener('click', (e)=>{
-    console.log('restart')
     window.location.reload(false);
   })
+}
+
+function updateScore() {
+  let winner = document.querySelector('strong').innerText;
+  let scoreContainer = document.querySelector('.score');
+  let score = parseInt(scoreContainer.innerText);
+
+  if(winner === 'YOU WIN'){
+    score++;
+    scoreContainer.innerText = String(score);
+  }
+  if(winner === 'YOU LOSE'){
+    score--;
+    scoreContainer.innerText = String(score);
+  }
+  if(winner === 'IT\'S A TIE'){
+    score;
+    scoreContainer.innerText = String(score);
+  }
 }
