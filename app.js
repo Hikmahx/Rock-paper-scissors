@@ -71,6 +71,7 @@ function displayComputerChoice(){
 }
 
 computerRandomChoice();
+restartGame();
 
 function computerRandomChoice() {
   let computerChoice = document.querySelector('.choice.computer-choice');
@@ -84,7 +85,6 @@ function computerRandomChoice() {
   let computerPick = randomChoice.cloneNode(true);
   computerChoice.appendChild(computerPick);
 }
-
 
 function comparePicks(){
   let winLoseTie = document.querySelector('.win-lose-tie')
@@ -135,4 +135,13 @@ function comparePicks(){
       return;
     }
   }
+}
+
+
+function restartGame() {
+  let restartBtn = document.querySelector('.win-lose-tie button');
+  restartBtn.addEventListener('click', (e)=>{
+    console.log('restart')
+    window.location.reload(false);
+  })
 }
