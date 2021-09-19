@@ -30,6 +30,7 @@ pickContainer.forEach(pick=>{
       document.querySelector('.computer-choice >.pick-container').style.visibility = 'visible';
       document.querySelector('.computer-choice >.pick-container').style.opacity= '1';
     }, 3000)
+    setTimeout(() => comparePicks(), 3600);
   })
 })
 
@@ -53,10 +54,6 @@ function shiftPick(pick) {
   let pickTop = pick.getBoundingClientRect().top;
   let pickLeft = pick.getBoundingClientRect().left;
   
-  console.log(`circle Left: ${choiceLeft}`)
-  console.log(`circle Top: ${choiceTop}`)
-  console.log(`pick top: ${pickTop}`)
-  console.log(`pick left: ${pickLeft}`)
   pick.style.transform = `translate(${choiceLeft-pickLeft}px, ${choiceTop-pickTop}px)`
   pick.style.transition = '1s ease';
 }
@@ -88,3 +85,54 @@ function computerRandomChoice() {
   computerChoice.appendChild(computerPick);
 }
 
+
+function comparePicks(){
+  let winLoseTie = document.querySelector('.win-lose-tie')
+  let winner = document.querySelector('.win-lose-tie >strong')
+  let theHousePick = document.querySelector('.computer-choice >.pick-container').lastElementChild.lastElementChild.className;
+  let myPick = document.querySelector('.pick-container.shift').lastElementChild.lastElementChild.className;
+  let win = 'YOU WIN';
+  let lose = 'YOU LOSE';
+  let tie = 'IT\'S A TIE'; 
+  winLoseTie.style.opacity = '1';
+
+  
+  // tie
+  if(myPick == theHousePick){
+    winner.textContent = tie;
+    return;
+  }
+
+  //rock
+  if(myPick === 'rock'){
+    if(theHousePick === 'scissors'){
+      winner.textContent = win;
+      return;
+    }else{
+      winner.textContent = lose;
+      return;
+    }
+  }
+
+  // paper
+  if(myPick === 'paper'){
+    if(theHousePick === 'rock'){
+      winner.textContent = win;
+      return;
+    }else{
+      winner.textContent = lose;
+      return;
+    }
+  }  
+
+  // scissors
+  if(myPick === 'scissors'){
+    if(theHousePick === 'paper'){
+      winner.textContent = win;
+      return;
+    }else{
+      winner.textContent = lose;
+      return;
+    }
+  }
+}
