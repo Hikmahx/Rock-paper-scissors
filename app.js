@@ -163,4 +163,22 @@ function updateScore() {
     score;
     scoreContainer.innerText = String(score);
   }
+  
+  localStorage.setItem('score', score);
+
+}
+
+getScore();
+
+function getScore(){
+  let currentScore = localStorage.getItem('score');
+  let score = document.querySelector('.score');
+
+  // if the localStorage data is deleted/tampered with
+  if(localStorage.getItem('score') == 'NaN' || '' || score.innerText == 'NaN' || ''){
+    localStorage.setItem('score', '12');
+    score.innerText = 12;
+  }
+
+  score.innerText = currentScore;
 }
