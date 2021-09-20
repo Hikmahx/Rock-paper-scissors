@@ -149,15 +149,19 @@ function restartGame() {
 function updateScore() {
   let winner = document.querySelector('strong').innerText;
   let scoreContainer = document.querySelector('.score');
+  let shift = document.querySelector('.shift');
+  let computer = document.querySelector('.computer-choice >.pick-container');
   let score = parseInt(scoreContainer.innerText);
 
   if(winner === 'YOU WIN'){
     score++;
     scoreContainer.innerText = String(score);
+    shift.classList.add('radiate');
   }
   if(winner === 'YOU LOSE'){
     score--;
     scoreContainer.innerText = String(score);
+    computer.classList.add('radiate');
   }
   if(winner === 'IT\'S A TIE'){
     score;
