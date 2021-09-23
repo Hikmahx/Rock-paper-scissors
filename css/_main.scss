@@ -285,3 +285,58 @@ main{
     opacity: 0;
   }
 }
+
+@media(max-width:320px){
+  main{
+    overflow: hidden;
+  }
+
+  .choices{
+    margin-left: 5%;
+
+    .win-lose-tie{
+      margin-left: -5%;
+
+      strong{
+        font-size: 4.4rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .choice{
+    h3{
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    &.computer-choice{
+      margin-left: 2rem;
+
+      h3{
+        position: absolute;
+        right: 9%;
+        bottom: 4.3rem;
+      }
+    }
+  }
+
+  .picks{
+    width: 100%;
+    left: -1rem;
+    .pick-container{
+      // transform: scale(0.9);
+      width:11.4rem;
+      height: 11.4rem;
+
+      .image{
+        height: 8.8rem;
+        width: 8.8rem;
+
+        img{
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}

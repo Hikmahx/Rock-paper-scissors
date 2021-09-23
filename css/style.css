@@ -437,6 +437,50 @@ main {
   }
 }
 
+@media (max-width: 320px) {
+  main {
+    overflow: hidden;
+  }
+  .choices {
+    margin-left: 5%;
+  }
+  .choices .win-lose-tie {
+    margin-left: -5%;
+  }
+  .choices .win-lose-tie strong {
+    font-size: 4.4rem;
+    white-space: nowrap;
+  }
+  .choice h3 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .choice.computer-choice {
+    margin-left: 2rem;
+  }
+  .choice.computer-choice h3 {
+    position: absolute;
+    right: 9%;
+    bottom: 4.3rem;
+  }
+  .picks {
+    width: 100%;
+    left: -1rem;
+  }
+  .picks .pick-container {
+    width: 11.4rem;
+    height: 11.4rem;
+  }
+  .picks .pick-container .image {
+    height: 8.8rem;
+    width: 8.8rem;
+  }
+  .picks .pick-container .image img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;
