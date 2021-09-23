@@ -437,10 +437,7 @@ main {
   }
 }
 
-@media (max-width: 320px) {
-  main {
-    overflow: hidden;
-  }
+@media (max-width: 335px) {
   .choices {
     margin-left: 5%;
   }
