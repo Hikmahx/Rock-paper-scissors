@@ -555,6 +555,19 @@ main {
   }
 }
 
+@media (min-width: 1000px) {
+  .choices {
+    padding: 0 10rem;
+  }
+  .choice.my-choice {
+    margin-left: 0;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+    margin-right: 4.5rem;
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;
