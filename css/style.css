@@ -508,6 +508,37 @@ main {
   }
 }
 
+@media (min-width: 720px) {
+  .scoreboard-container {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10rem;
+  }
+  .picks .pick-container {
+    width: 15.24rem;
+    height: 15.24rem;
+  }
+  .picks .pick-container .image {
+    width: 11.76rem;
+    height: 11.76rem;
+  }
+  .picks .pick-container .image img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .choice.my-choice {
+    margin-right: 0;
+    grid-column-end: 4;
+    width: 17rem;
+  }
+  .choice.my-choice h3 {
+    margin-left: 6rem;
+  }
+  .choice h3 {
+    margin-top: 5.5rem;
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;

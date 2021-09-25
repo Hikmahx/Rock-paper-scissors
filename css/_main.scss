@@ -374,3 +374,47 @@ main{
     }
   }
 }
+
+@media (min-width:720px){
+  .scoreboard-container {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10rem;
+  }
+
+  .picks{
+    .pick-container{
+      // transform: scale(1.2);
+      width: 15.24rem;
+      height: 15.24rem;
+
+      .image{
+        width: 11.76rem;
+        height: 11.76rem;
+
+        img{
+      transform: scale(1.1);
+
+        }
+      }
+    }
+  }
+
+  .choice{
+    &.my-choice{
+      margin-right: 0;
+      // margin-left: 5rem;
+      grid-column-end: 4;
+      width: 17rem;
+      // right: 7rem;
+
+      h3{
+        margin-left: 6rem;
+      }
+    }
+
+    h3{
+      margin-top: 5.5rem;
+    }
+  }
+}
