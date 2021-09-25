@@ -403,7 +403,7 @@ main{
   .choice{
     &.my-choice{
       margin-right: 0;
-      // margin-left: 5rem;
+      margin-left: 5%;
       grid-column-end: 4;
       width: 17rem;
       // right: 7rem;
@@ -415,6 +415,22 @@ main{
 
     h3{
       margin-top: 5.5rem;
+    }
+  }
+}
+
+@media(min-width:800px){
+  .choice{
+    &.my-choice{
+      margin-left: 4.4%;
+    }
+  }
+}
+
+@media(min-width:900px){
+  .choice{
+    &.my-choice{
+      margin-left: 6.5%;
     }
   }
 }
