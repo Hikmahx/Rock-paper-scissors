@@ -489,6 +489,25 @@ main {
   }
 }
 
+@media (min-width: 600px) {
+  .choices {
+    height: 29rem;
+  }
+  .choices .triangle {
+    margin: 5.5rem 0 0 0.3rem;
+    position: absolute;
+    width: 22.5rem;
+  }
+  .picks .pick-container.paper {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+  .picks .pick-container.scissors {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;

@@ -348,3 +348,29 @@ main{
     }
   }
 }
+
+@media(min-width:600px){
+
+  .choices{
+    height: 29rem;
+
+    .triangle{
+      margin: 5.5rem 0 0 0.3rem ;
+      position: absolute;
+      width: 22.5rem;
+    }
+  }
+
+  .picks{
+
+    .pick-container{
+      &.paper{
+        grid-column-start: 3;
+      }
+
+      &.scissors{
+        grid-column-start: 4;
+      }
+    }
+  }
+}
