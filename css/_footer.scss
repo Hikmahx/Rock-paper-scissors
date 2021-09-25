@@ -18,3 +18,13 @@ footer{
     font-weight: 600;
   }
 }
+
+@media (min-width:1100px){
+  footer{
+    button{
+      position: absolute;
+      bottom: 3.1rem;
+      right: 3rem;
+    }
+  }
+}
