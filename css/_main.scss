@@ -441,6 +441,9 @@ main{
 }
 
 @media(min-width:1000px){
+  body{
+    height: 76.8rem;
+  }
   .choices{
     padding: 0 10rem;
   }
