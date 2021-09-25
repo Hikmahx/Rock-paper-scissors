@@ -50,3 +50,35 @@
     display: none;
   }
 }
+
+@media (min-width:1000px){
+  .modal{
+    width: 30%;
+    height: 41.6rem;
+    right: 0;
+    left: 0;
+    top: 0.3rem;
+    bottom: 0;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 60rem #0707078f;
+
+    h1{
+      margin: 2.7rem 1.8rem 0.9rem;
+      position: absolute;
+    }
+
+    .close-btn{
+      margin: 3.7rem 2.5rem;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .img-rules{
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 9rem;
+    }
+  }
+}
