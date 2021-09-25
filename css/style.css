@@ -478,6 +478,17 @@ main {
   }
 }
 
+@media (min-width: 500px) {
+  .choices {
+    height: 27rem;
+  }
+  .choices .triangle {
+    margin: 5.5rem 0.2rem 0 0;
+    position: absolute;
+    width: 22.5rem;
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;
