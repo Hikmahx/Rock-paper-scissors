@@ -568,6 +568,83 @@ main {
   }
 }
 
+@media (min-width: 1100px) {
+  body {
+    height: 100vh;
+  }
+  .scoreboard-container {
+    width: 70.5rem;
+    margin: auto;
+    margin-bottom: 12rem;
+    margin-top: 1.6rem;
+    padding: 1.8rem;
+    height: 15.4rem;
+    border-radius: 1.6rem;
+  }
+  .scoreboard-container img {
+    width: 16.2rem;
+    height: 9.9rem;
+  }
+  .scoreboard-container .scoreboard, .scoreboard-container .choices .win-lose-tie button, .choices .win-lose-tie .scoreboard-container button {
+    width: 15rem;
+    height: 11.4rem;
+    border-radius: 0.8rem;
+    margin-right: 0.5rem;
+  }
+  .scoreboard-container .scoreboard h2, .scoreboard-container .choices .win-lose-tie button h2, .choices .win-lose-tie .scoreboard-container button h2 {
+    font-size: 1.7rem;
+    margin-top: 0.4rem;
+  }
+  .scoreboard-container .scoreboard .score, .scoreboard-container .choices .win-lose-tie button .score, .choices .win-lose-tie .scoreboard-container button .score {
+    font-size: 6.4rem;
+    bottom: 0.58rem;
+  }
+  .choices {
+    padding: 0 10rem;
+  }
+  .choices .triangle {
+    top: -2.4rem;
+    width: 33rem;
+    height: 27rem;
+  }
+  .picks .pick-container {
+    width: 19.59rem;
+    height: 19.59rem;
+  }
+  .picks .pick-container .image {
+    width: 15.11rem;
+    height: 15.11rem;
+  }
+  .picks .pick-container .image img {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .picks .pick-container.paper {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+    margin-right: 0;
+    margin-right: -1.3rem;
+  }
+  .picks .pick-container.scissors {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+  .picks .pick-container.rock {
+    -ms-grid-row: 26;
+        grid-row-start: 26;
+  }
+  .choice.my-choice {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+  }
+  .choice.computer-choice {
+    -ms-grid-column: 4;
+        grid-column-start: 4;
+  }
+}
+
 footer {
   width: 100%;
   display: -webkit-box;
