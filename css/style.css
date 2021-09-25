@@ -550,6 +550,9 @@ main {
   .choice.my-choice {
     margin-left: 6.5%;
   }
+  .choices .win-lose-tie {
+    bottom: 10.7rem;
+  }
 }
 
 footer {
