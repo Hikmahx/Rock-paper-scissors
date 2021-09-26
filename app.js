@@ -188,7 +188,7 @@ function getScore(){
   let score = document.querySelector('.score');
 
   // if the localStorage data is deleted/tampered with
-  if(localStorage.getItem('score') == 'NaN' || '' || score.innerText == 'NaN' || ''){
+  if(localStorage.getItem('score') == 'NaN' || localStorage.getItem('score') == '' || score.innerText == 'NaN' || score.innerText == ''){
     localStorage.setItem('score', '12');
     score.innerText = 12;
   }
