@@ -216,6 +216,9 @@ function shiftBothPicks(pick){
   let mine = document.querySelector('.my-choice > .circle-container');
   let circleContainer = document.querySelectorAll('.circle-container');
   let computer = document.querySelector('.choice.computer-choice .pick-container');
+  let computerHeader = document.querySelector('.choice.computer-choice h3');
+  let computerCircle = document.querySelector('.choice.computer-choice .circle-container');
+  let myHeader = document.querySelector('.choice.my-choice h3')
   let myPick = document.querySelector('.pick-container.shift').lastElementChild.lastElementChild.className;
   let winLoseTie = document.querySelector('.win-lose-tie') 
   let winLoseTieWidth = winLoseTie.clientWidth
@@ -223,4 +226,7 @@ function shiftBothPicks(pick){
   shift.style.marginLeft = `-${winLoseTieWidth}px`
   computer.style.left = '105px'
   computer.style.transition = '1s ease';
+  computerCircle.style.display = 'none'
+  computerHeader.style.left = '105px'
+  myHeader.style.left = '-105px'
 }
