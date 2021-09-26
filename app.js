@@ -23,7 +23,9 @@ pickContainer.forEach(pick=>{
     let pickType = pick.lastElementChild.lastElementChild.className;
         e.target= pick;
     removeOtherPicks(pickType);
-    shiftPick(pick);
+    // shiftPick(pick);
+    setTimeout(() => shiftPick(pick), 10);
+
     displayMyChoice();
     displayComputerChoice();
     setTimeout(()=>{
@@ -36,7 +38,9 @@ pickContainer.forEach(pick=>{
     }
 
       else{
-      enlargePick()
+      // enlargePick()
+      setTimeout(() => enlargePick(), 00);
+
         setTimeout(() => shiftBothPicks(), 5000);
         setTimeout(() => comparePicks(), 5600);
         setTimeout(() => updateScore(), 5700);
@@ -217,6 +221,6 @@ function shiftBothPicks(pick){
   let winLoseTieWidth = winLoseTie.clientWidth
   let shift = document.querySelector('.shift');
   shift.style.marginLeft = `-${winLoseTieWidth}px`
-  computer.style.left = '120px'
+  computer.style.left = '105px'
   computer.style.transition = '1s ease';
 }
