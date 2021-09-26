@@ -21,11 +21,9 @@ window.addEventListener('click', (e)=>{
 pickContainer.forEach(pick=>{
   pick.addEventListener('click', (e)=>{
     let pickType = pick.lastElementChild.lastElementChild.className;
-        e.target= pick;
+    e.target= pick;
     removeOtherPicks(pickType);
-    // shiftPick(pick);
     setTimeout(() => shiftPick(pick), 10);
-
     displayMyChoice();
     displayComputerChoice();
     setTimeout(()=>{
@@ -38,12 +36,10 @@ pickContainer.forEach(pick=>{
     }
 
       else{
-      // enlargePick()
       setTimeout(() => enlargePick(), 00);
-
-        setTimeout(() => shiftBothPicks(), 5000);
-        setTimeout(() => comparePicks(), 5600);
-        setTimeout(() => updateScore(), 5700);
+      setTimeout(() => shiftBothPicks(), 5000);
+      setTimeout(() => comparePicks(), 5600);
+      setTimeout(() => updateScore(), 5700);
     
     }
   })
@@ -92,7 +88,6 @@ function computerRandomChoice() {
   let computerChoice = document.querySelector('.choice.computer-choice');
   let pickArray = [];
   pickContainer.forEach(pick=>{
-    let pickType = pick;
     pickArray.push(pick)
   }) 
   let pickIndex = Math.floor(Math.random() * 3);
@@ -212,14 +207,11 @@ function enlargePick(){
   })
 }
 
-function shiftBothPicks(pick){
-  let mine = document.querySelector('.my-choice > .circle-container');
-  let circleContainer = document.querySelectorAll('.circle-container');
+function shiftBothPicks(){
   let computer = document.querySelector('.choice.computer-choice .pick-container');
   let computerHeader = document.querySelector('.choice.computer-choice h3');
   let computerCircle = document.querySelector('.choice.computer-choice .circle-container');
   let myHeader = document.querySelector('.choice.my-choice h3')
-  let myPick = document.querySelector('.pick-container.shift').lastElementChild.lastElementChild.className;
   let winLoseTie = document.querySelector('.win-lose-tie') 
   let winLoseTieWidth = winLoseTie.clientWidth
   let shift = document.querySelector('.shift');
