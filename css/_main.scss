@@ -88,6 +88,11 @@ main{
       height: 4.8rem;
       // font-weight: 700;
       color: $dark-text;
+
+      &:hover{
+        cursor:pointer;
+        color: #c53754;
+      }
     }
   }
 }

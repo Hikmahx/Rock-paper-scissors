@@ -218,6 +218,11 @@ main {
   color: #3b4363;
 }
 
+.choices .win-lose-tie button:hover {
+  cursor: pointer;
+  color: #c53754;
+}
+
 .picks {
   position: absolute;
   top: 0;
