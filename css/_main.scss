@@ -442,7 +442,8 @@ main{
 
 @media(min-width:1000px){
   body{
-    height: 76.8rem;
+    min-height: 76.8rem;
+    height: 100vh;
   }
   .choices{
     padding: 0 10rem;
@@ -476,7 +477,8 @@ main{
 
 @media(min-width:1100px){
   body{
-    height: 76.8rem;
+    min-height: 76.8rem;
+    height: 100vh;
   }
 
   .scoreboard-container{
