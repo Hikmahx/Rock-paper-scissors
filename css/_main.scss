@@ -465,6 +465,11 @@ main{
       .pick-container{
         top: 7rem;
       }
+
+      .circle-container{
+        margin-top: 5rem;
+        margin-left: 3rem;
+      }
     }
   }
 }
@@ -556,8 +561,11 @@ main{
       font-size: 2rem;
     }
 
-    // .circle-container{
+    .circle-container{
       // margin-top: 5.6rem;
+      width: 19rem;
+      height: 19rem;
+    }
 
     // }
     
