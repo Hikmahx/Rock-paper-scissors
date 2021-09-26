@@ -186,6 +186,10 @@ getScore();
 function getScore(){
   let currentScore = localStorage.getItem('score');
   let score = document.querySelector('.score');
+  score.innerText = 12;
+  localStorage.setItem('score', '12');
+
+
 
   // if the localStorage data is deleted/tampered with
   if(localStorage.getItem('score') == 'NaN' || localStorage.getItem('score') == '' || score.innerText == 'NaN' || score.innerText == ''){
