@@ -454,6 +454,18 @@ main{
       grid-column-end: 5;
       margin-right: 4.5rem;
     }
+
+    .circle-container{
+      order: 1;
+    }
+
+    &.computer-choice{
+      // margin-top: 2rem;
+
+      .pick-container{
+        top: 7rem;
+      }
+    }
   }
 }
 
@@ -536,11 +548,41 @@ main{
     }
   }
   .choice{
+    // position: relative;
+    h3{
+      position: absolute;
+      // top: -8rem;
+      top: -11rem;
+      font-size: 2rem;
+    }
+
+    // .circle-container{
+      // margin-top: 5.6rem;
+
+    // }
+    
     &.my-choice{
       grid-column-start: 3;
+      position: relative;
+
+      .circle-container{
+        // margin-top: 12.7rem;
+        // margin-top: 10rem;
+        position: absolute;
+        top: 12.7rem;
+        left: 3rem;
+      }
+      // grid-colum
     }
+
     &.computer-choice{
       grid-column-start: 4;
+      margin-left: -20rem;
+
+      .pick-container {
+        top:3.2rem;
+        left: -1.7rem;
+      }
     }
   }
 }
