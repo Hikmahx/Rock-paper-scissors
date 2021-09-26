@@ -688,8 +688,7 @@ main {
   }
   .choice.my-choice .circle-container {
     position: absolute;
-    top: 12.7rem;
-    left: 3rem;
+    top: 3.145rem;
   }
   .choice.computer-choice {
     -ms-grid-column: 4;
