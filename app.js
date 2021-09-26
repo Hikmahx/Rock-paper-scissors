@@ -184,15 +184,18 @@ function updateScore() {
 getScore();
 
 function getScore(){
-  localStorage.setItem('score', '12');
+  // localStorage.setItem('score', '12');
   let currentScore = localStorage.getItem('score');
   let score = document.querySelector('.score');
-  score.innerText = 12;
+  // score.innerText = 12;
 
 
 
   // if the localStorage data is deleted/tampered with
-  if(localStorage.getItem('score') == 'NaN' || localStorage.getItem('score') == '' || score.innerText == 'NaN' || score.innerText == ''){
+  if(localStorage.getItem('score') == 'NaN' ||
+     localStorage.getItem('score') === null || 
+     score.innerText == 'NaN' || 
+     score.innerText == ''){
     localStorage.setItem('score', '12');
     score.innerText = 12;
   }
