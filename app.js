@@ -30,8 +30,18 @@ pickContainer.forEach(pick=>{
       document.querySelector('.computer-choice >.pick-container').style.visibility = 'visible';
       document.querySelector('.computer-choice >.pick-container').style.opacity= '1';
     }, 3000)
-    setTimeout(() => comparePicks(), 3600);
-    setTimeout(() => updateScore(), 3700);
+    if(window.innerWidth < 1100){
+      setTimeout(() => comparePicks(), 3600);
+      setTimeout(() => updateScore(), 3700);
+    }
+
+      else{
+      enlargePick()
+        setTimeout(() => shiftBothPicks(), 5000);
+        setTimeout(() => comparePicks(), 5600);
+        setTimeout(() => updateScore(), 5700);
+    
+    }
   })
 })
 
@@ -185,4 +195,28 @@ function getScore(){
   }
 
   score.innerText = currentScore;
+}
+
+function enlargePick(){
+  let allPicks = document.querySelectorAll('.pick-container');
+  allPicks.forEach(pick=>{
+    pick.style.width = '29rem'
+    pick.style.height = '29rem'
+    pick.childNodes[1].style.width = '22rem'
+    pick.childNodes[1].style.height = '22rem'
+    pick.childNodes[1].childNodes[1].style.transform = 'scale(1.85)'
+  })
+}
+
+function shiftBothPicks(pick){
+  let mine = document.querySelector('.my-choice > .circle-container');
+  let circleContainer = document.querySelectorAll('.circle-container');
+  let computer = document.querySelector('.choice.computer-choice .pick-container');
+  let myPick = document.querySelector('.pick-container.shift').lastElementChild.lastElementChild.className;
+  let winLoseTie = document.querySelector('.win-lose-tie') 
+  let winLoseTieWidth = winLoseTie.clientWidth
+  let shift = document.querySelector('.shift');
+  shift.style.marginLeft = `-${winLoseTieWidth}px`
+  computer.style.left = '120px'
+  computer.style.transition = '1s ease';
 }
