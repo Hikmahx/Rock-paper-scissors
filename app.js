@@ -184,10 +184,9 @@ function updateScore() {
 getScore();
 
 function getScore(){
-  // localStorage.setItem('score', '12');
   let currentScore = localStorage.getItem('score');
   let score = document.querySelector('.score');
-  // score.innerText = 12;
+  
 
 
 
