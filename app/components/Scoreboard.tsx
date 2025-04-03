@@ -1,0 +1,35 @@
+import type React from 'react';
+import { View, Text } from 'react-native';
+import tw from '../lib/tailwind';
+import type { ScoreboardProps } from '../types/game-types';
+
+const Scoreboard: React.FC<ScoreboardProps> = ({ score }) => {
+  return (
+    <View
+      style={tw`w-full h-24 mb-24 flex-row justify-between items-center p-3 border-3 border-header-outline rounded-xl`}
+    >
+      <View style={tw`ml-2`}>
+        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
+          ROCK
+        </Text>
+        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
+          PAPER
+        </Text>
+        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
+          SCISSORS
+        </Text>
+      </View>
+
+      <View
+        style={tw`bg-white p-3 rounded-md w-20 h-18 items-center justify-center`}
+      >
+        <Text style={tw`text-score-text text-sm font-bold tracking-wider`}>
+          SCORE
+        </Text>
+        <Text style={tw`text-dark-text text-4xl font-bold -mb-1`}>{score}</Text>
+      </View>
+    </View>
+  );
+};
+
+export default Scoreboard;
