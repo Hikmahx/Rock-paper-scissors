@@ -2,6 +2,7 @@ import type React from 'react';
 import { View, Text } from 'react-native';
 import tw from '../lib/tailwind';
 import type { ScoreboardProps } from '../types/game-types';
+import Logo from '../assets/logo.svg';
 
 const Scoreboard: React.FC<ScoreboardProps> = ({ score }) => {
   return (
@@ -9,15 +10,7 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ score }) => {
       style={tw`w-full h-24 mb-24 flex-row justify-between items-center p-3 border-3 border-header-outline rounded-xl`}
     >
       <View style={tw`ml-2`}>
-        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
-          ROCK
-        </Text>
-        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
-          PAPER
-        </Text>
-        <Text style={tw`text-white text-3xl font-bold tracking-widest`}>
-          SCISSORS
-        </Text>
+        <Logo />
       </View>
 
       <View

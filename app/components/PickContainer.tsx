@@ -1,8 +1,12 @@
 import type React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import tw from '../lib/tailwind';
 import { LinearGradient } from 'expo-linear-gradient';
 import type { PickContainerProps } from '../types/game-types';
+
+import RockIcon from '../assets/icon-rock.svg';
+import PaperIcon from '../assets/icon-paper.svg';
+import ScissorsIcon from '../assets/icon-scissors.svg';
 
 const PickContainer: React.FC<PickContainerProps> = ({
   type,
@@ -36,16 +40,16 @@ const PickContainer: React.FC<PickContainerProps> = ({
     }
   };
 
-  const getIconSource = () => {
+  const IconComponent = () => {
     switch (type) {
       case 'rock':
-        return require('../assets/icon-rock.svg');
+        return <RockIcon />;
       case 'paper':
-        return require('../assets/icon-paper.svg');
+        return <PaperIcon />;
       case 'scissors':
-        return require('../assets/icon-scissors.svg');
+        return <ScissorsIcon />;
       default:
-        return require('../assets/icon-rock.svg');
+        return <RockIcon />;
     }
   };
 
@@ -90,11 +94,7 @@ const PickContainer: React.FC<PickContainerProps> = ({
             },
           ]}
         >
-          <Image
-            source={getIconSource()}
-            style={tw`w-12 h-12`}
-            resizeMode='contain'
-          />
+          <IconComponent />
         </View>
       </LinearGradient>
     </TouchableOpacity>

@@ -2,6 +2,8 @@ import type React from 'react';
 import { Modal, View, Text, TouchableOpacity, Image } from 'react-native';
 import tw from '../lib/tailwind';
 import type { RulesModalProps } from '../types/game-types';
+import Close from '../assets/icon-close.svg';
+import Rules from '../assets/image-rules.svg';
 
 const RulesModal: React.FC<RulesModalProps> = ({ visible, onClose }) => {
   return (
@@ -18,19 +20,12 @@ const RulesModal: React.FC<RulesModalProps> = ({ visible, onClose }) => {
           <View style={tw`flex-row justify-between items-center mb-6`}>
             <Text style={tw`text-dark-text text-3xl font-bold`}>RULES</Text>
             <TouchableOpacity onPress={onClose}>
-              <Image
-                source={require('../assets/icon-close.svg')}
-                style={tw`w-5 h-5`}
-              />
+              <Close width={24} height={24} />
             </TouchableOpacity>
           </View>
 
           <View style={tw`items-center justify-center mb-6`}>
-            <Image
-              source={require('../assets/image-rules.svg')}
-              style={tw`w-64 h-64`}
-              resizeMode='contain'
-            />
+            <Rules />
           </View>
         </View>
       </View>

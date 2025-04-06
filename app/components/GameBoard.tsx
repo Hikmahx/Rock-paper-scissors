@@ -5,6 +5,7 @@ import type { Choice } from '../types/game-types';
 import PickContainer from './PickContainer';
 import ChoiceDisplay from './ChoiceDisplay';
 import WinLoseTie from './WinLoseTie';
+import Triangle from '../assets/bg-triangle.svg';
 
 interface GameBoardProps {
   gameState: 'choosing' | 'result';
@@ -33,12 +34,15 @@ const GameBoard: React.FC<GameBoardProps> = ({
     <View style={tw`flex-1 items-center justify-center relative`}>
       {gameState === 'choosing' ? (
         <View style={tw`relative w-full items-center justify-center`}>
-          <View style={tw`w-72 h-72 items-center justify-center`}>
+          <View style={tw`w-96 h-96 items-center justify-center`}>
             {/* Triangle background would be an image in the background */}
+            <View style={tw`absolute w-full h-full items-center justify-center`}>
+              <Triangle />
+            </View>
             <View
               style={tw`absolute w-full h-full items-center justify-center`}
             >
-              <View style={tw`w-64 h-64 items-center justify-center`}>
+              <View style={tw`w-96 h-96 items-center justify-center`}>
                 {/* Paper - Top Left */}
                 <View style={tw`absolute top-0 left-0`}>
                   <PickContainer
