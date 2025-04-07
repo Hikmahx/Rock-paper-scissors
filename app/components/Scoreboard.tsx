@@ -16,10 +16,10 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ score }) => {
       <View
         style={tw`bg-white p-3 rounded-md w-20 h-18 items-center justify-center`}
       >
-        <Text style={tw`text-score-text text-sm font-bold tracking-wider`}>
+        <Text style={tw`text-sm font-bold tracking-wider font-barlow`}>
           SCORE
         </Text>
-        <Text style={tw`text-dark-text text-4xl font-bold -mb-1`}>{score}</Text>
+        <Text style={tw`text-dark-text text-4xl font-bold -mb-1 font-barlowBold`}>{score}</Text>
       </View>
     </View>
   );

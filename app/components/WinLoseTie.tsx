@@ -14,13 +14,13 @@ const WinLoseTie: React.FC<WinLoseTieProps> = ({
     <View
       style={tw`absolute left-0 right-0 items-center justify-center bottom-[-40]`}
     >
-      <Text style={tw`text-white text-5xl font-bold mb-6`}>{result}</Text>
+      <Text style={tw`text-white text-5xl font-bold mb-6 font-barlow`}>{result}</Text>
 
       <TouchableOpacity
         style={tw`bg-white py-3 px-14 rounded-lg`}
         onPress={onPlayAgain}
       >
-        <Text style={tw`text-dark-text text-lg font-bold tracking-wider`}>
+        <Text style={tw`text-dark-text text-lg font-bold tracking-wider font-barlow`}>
           PLAY AGAIN
         </Text>
       </TouchableOpacity>

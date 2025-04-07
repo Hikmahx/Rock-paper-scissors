@@ -11,7 +11,7 @@ const ChoiceDisplay: React.FC<ChoiceDisplayProps> = ({
 }) => {
   return (
     <View style={tw`items-center justify-center`}>
-      <Text style={tw`text-white text-lg font-bold tracking-wider mb-6`}>
+      <Text style={tw`text-white text-lg font-bold tracking-wider mb-6 font-barlow`}>
         {type === 'my-choice' ? 'YOU PICKED' : 'THE HOUSE PICKED'}
       </Text>
 

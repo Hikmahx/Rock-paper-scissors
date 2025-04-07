@@ -18,7 +18,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ visible, onClose }) => {
       >
         <View style={tw`bg-white w-[90%] max-w-md rounded-xl p-6`}>
           <View style={tw`flex-row justify-between items-center mb-6`}>
-            <Text style={tw`text-dark-text text-3xl font-bold`}>RULES</Text>
+            <Text style={tw`text-dark-text text-3xl font-barlowBold`}>RULES</Text>
             <TouchableOpacity onPress={onClose}>
               <Close width={24} height={24} />
             </TouchableOpacity>

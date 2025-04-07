@@ -10,6 +10,11 @@ import Scoreboard from './components/Scoreboard';
 import GameBoard from './components/GameBoard';
 import RulesModal from './components/RulesModal';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useFonts } from 'expo-font';
+import { BarlowSemiCondensed_600SemiBold, BarlowSemiCondensed_700Bold } from '@expo-google-fonts/barlow-semi-condensed';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const [score, setScore] = useState<number>(12);
@@ -20,6 +25,18 @@ export default function App() {
   >(null);
   const [showRules, setShowRules] = useState<boolean>(false);
   const [gameState, setGameState] = useState<'choosing' | 'result'>('choosing');
+
+  const [fontsLoaded] = useFonts({
+    BarlowSemiCondensed_600SemiBold,
+    BarlowSemiCondensed_700Bold,
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+      console.log('font loaded')
+    }
+  }, [fontsLoaded]);
 
   useEffect(() => {
     loadScore();
@@ -108,7 +125,9 @@ export default function App() {
       style={tw`flex-1`}
     >
       <StatusBar style='light' />
-      <SafeAreaView style={tw`flex-1`}>
+      <SafeAreaView 
+      style={[tw`flex-1`, { fontFamily: 'BarlowSemiCondensed_600SemiBold' }]}
+      >
         <View style={tw`flex-1 px-6 py-12`}>
           <Scoreboard score={score} />
 
@@ -126,7 +145,11 @@ export default function App() {
               style={tw`border border-header-outline rounded-lg py-3 px-10`}
               onPress={() => setShowRules(true)}
             >
-              <Text style={tw`text-white text-lg font-bold tracking-widest`}>
+              <Text
+                style={[
+                  tw`text-white text-lg font-bold tracking-widest font-barlowBold`,
+                ]}
+              >
                 RULES
               </Text>
             </TouchableOpacity>
