@@ -7,10 +7,10 @@ import Logo from '../assets/logo.svg';
 const Scoreboard: React.FC<ScoreboardProps> = ({ score }) => {
   return (
     <View
-      style={tw`w-full h-24 mb-24 flex-row justify-between items-center p-3 border-3 border-header-outline rounded-xl`}
+      style={tw`w-full mb-12 flex-row justify-between items-center p-3 border-[3px] border-slate-500 rounded-xl`}
     >
-      <View style={tw`ml-2`}>
-        <Logo />
+      <View style={tw`ml-2 w-32`}>
+        <Logo style={tw`w-16 h-16`}/>
       </View>
 
       <View
