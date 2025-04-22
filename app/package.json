@@ -21,6 +21,8 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.9",
+    "react-native-gesture-handler": "^2.25.0",
+    "react-native-reanimated": "~3.8.0",
     "react-native-svg": "^15.11.2",
     "react-native-svg-transformer": "^1.5.0",
     "react-native-web": "~0.19.13",
@@ -29,7 +31,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-private-methods": "^7.25.9",
     "@types/react": "~18.3.12",
+    "metro-react-native-babel-preset": "^0.77.0",
     "typescript": "^5.3.3"
   },
   "private": true

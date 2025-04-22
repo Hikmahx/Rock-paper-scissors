@@ -1,5 +1,6 @@
 'use client';
 
+// import 'react-native-reanimated';
 import { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
@@ -13,6 +14,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
 import { BarlowSemiCondensed_600SemiBold, BarlowSemiCondensed_700Bold } from '@expo-google-fonts/barlow-semi-condensed';
 import * as SplashScreen from 'expo-splash-screen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -120,44 +123,55 @@ export default function App() {
   };
 
   return (
-    <LinearGradient
-      colors={['rgb(31, 55, 86)', 'rgb(20, 21, 57)']}
-      style={tw`flex-1`}
-    >
-      <StatusBar style='light' />
-      <SafeAreaView 
-      style={[tw`flex-1`, { fontFamily: 'BarlowSemiCondensed_600SemiBold' }]}
+    <GestureHandlerRootView style={styles.container}>
+      <LinearGradient
+        colors={['rgb(31, 55, 86)', 'rgb(20, 21, 57)']}
+        style={tw`flex-1`}
       >
-        <View style={tw`flex-1 px-6 py-12`}>
-          <Scoreboard score={score} />
+        <StatusBar style='light' />
+        <SafeAreaView
+          style={[
+            tw`flex-1`,
+            { fontFamily: 'BarlowSemiCondensed_600SemiBold' },
+          ]}
+        >
+          <View style={tw`flex-1 px-6 py-12`}>
+            <Scoreboard score={score} />
 
-          <GameBoard
-            gameState={gameState}
-            myChoice={myChoice}
-            computerChoice={computerChoice}
-            result={result}
-            onChoiceSelect={handleChoice}
-            onPlayAgain={resetGame}
-          />
+            <GameBoard
+              gameState={gameState}
+              myChoice={myChoice}
+              computerChoice={computerChoice}
+              result={result}
+              onChoiceSelect={handleChoice}
+              onPlayAgain={resetGame}
+            />
 
-          <View style={tw`mt-auto items-center mb-8`}>
-            <TouchableOpacity
-              style={tw`border border-header-outline rounded-lg py-3 px-10`}
-              onPress={() => setShowRules(true)}
-            >
-              <Text
-                style={[
-                  tw`text-white text-lg font-bold tracking-widest font-barlowBold`,
-                ]}
+            <View style={tw`mt-auto items-center mb-8`}>
+              <TouchableOpacity
+                style={tw`border border-header-outline rounded-lg py-3 px-10`}
+                onPress={() => setShowRules(true)}
               >
-                RULES
-              </Text>
-            </TouchableOpacity>
+                <Text
+                  style={[
+                    tw`text-white text-lg font-bold tracking-widest font-barlowBold`,
+                  ]}
+                >
+                  RULES
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
 
-        <RulesModal visible={showRules} onClose={() => setShowRules(false)} />
-      </SafeAreaView>
-    </LinearGradient>
+          <RulesModal visible={showRules} onClose={() => setShowRules(false)} />
+        </SafeAreaView>
+      </LinearGradient>
+    </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
